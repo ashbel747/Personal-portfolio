@@ -9,7 +9,10 @@ async function bootstrap() {
 
   // Enable CORS for frontend
   app.enableCors({
-    origin: 'http://localhost:3000',
+    origin: [
+      'http://localhost:3000',                   // for local development
+      'https://ashbelkingori.vercel.app',        // for deployed frontend
+    ],
   });
 
   // Get Mongoose connection after Nest bootstraps
