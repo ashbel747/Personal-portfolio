@@ -2,7 +2,17 @@
 
 import { motion } from "framer-motion";
 
-const services = [
+interface Service {
+  title: string;
+  description: string;
+}
+
+interface Skill {
+  name: string;
+  level: number;
+}
+
+const services: Service[] = [
   {
     title: "Full-Stack Web Development",
     description:
@@ -20,7 +30,7 @@ const services = [
   },
 ];
 
-const skills = [
+const skills: Skill[] = [
   { name: "TypeScript", level: 85 },
   { name: "JavaScript", level: 90 },
   { name: "HTML/CSS", level: 95 },
@@ -34,7 +44,7 @@ export default function About() {
 
       {/* Services Cards */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-16">
-        {services.map((service, i) => (
+        {services.map((service: Service, i: number) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 40 }}
@@ -53,11 +63,9 @@ export default function About() {
 
       {/* Skills Section */}
       <div>
-        <h3 className="text-2xl font-semibold mb-8 text-center">
-          My Skills
-        </h3>
+        <h3 className="text-2xl font-semibold mb-8 text-center">My Skills</h3>
         <div className="space-y-6">
-          {skills.map((skill, index) => (
+          {skills.map((skill: Skill, index: number) => (
             <div key={index}>
               <div className="flex justify-between mb-1">
                 <span className="text-sm font-medium">{skill.name}</span>
