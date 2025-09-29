@@ -32,7 +32,7 @@ It features:
 
 ## 📸 Preview  
 
-👉 [Live Demo](#) _https://ashbelkingori.vercel.app/_  
+👉 Live demo: [_https://ashbelkingori.vercel.app/_] 
 
 ![Portfolio Screenshot](#) <!-- Add a screenshot of your site here -->
 
