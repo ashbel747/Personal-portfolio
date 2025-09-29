@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "../pages/hero_page";
 import About from "../pages/about_page";
 import PortfolioPage from "../portfolio/page";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Ashbel King'ori | Portfolio",
@@ -22,6 +23,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <PortfolioPage />
+      <Footer />
     </div>
   );
 }
