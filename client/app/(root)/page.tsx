@@ -3,6 +3,7 @@ import Hero from "../pages/hero_page";
 import About from "../pages/about_page";
 import PortfolioPage from "../portfolio/page";
 import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Ashbel King'ori | Portfolio",
@@ -23,6 +24,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <PortfolioPage />
+      <ContactForm />
       <Footer />
     </div>
   );
