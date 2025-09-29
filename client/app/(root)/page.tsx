@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "../pages/hero_page";
+import About from "../pages/about_page";
 
 export const metadata: Metadata = {
   title: "Ashbel King'ori | Portfolio",
@@ -18,6 +19,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <Hero />
+      <About />
     </div>
   );
 }
