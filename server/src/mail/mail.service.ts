@@ -1,34 +1,42 @@
+// mail.service.ts
 import { Injectable } from '@nestjs/common';
-import * as nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class MailService {
-  private transporter;
+  private resend: Resend;
 
-  constructor() {
-    // Configure the transporter with your email service credentials
-    this.transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com', // use your email provider's SMTP
-      port: 587,
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: process.env.EMAIL_USER, // your email
-        pass: process.env.EMAIL_PASS, // your app password or email password
-      },
-    });
+  constructor(private readonly configService: ConfigService) {
+    const apiKey = this.configService.get<string>('RESEND_API_KEY', '');
+    if (!apiKey) throw new Error('RESEND_API_KEY is missing');
+    this.resend = new Resend(apiKey);
   }
 
   async sendContactEmail(name: string, email: string, message: string) {
-    const mailOptions = {
-      from: `"${name}" <${email}>`, // sender address
-      to: process.env.CONTACT_RECEIVER_EMAIL, // your email
-      subject: 'Contact Form Submission',
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-      html: `<p><strong>Name:</strong> ${name}</p>
-             <p><strong>Email:</strong> ${email}</p>
-             <p><strong>Message:</strong> ${message}</p>`,
-    };
+    const fromEmail = this.configService.get<string>('RESEND_FROM_EMAIL', '');
+    const toEmail = this.configService.get<string>('CONTACT_RECEIVER_EMAIL', '');
 
-    return this.transporter.sendMail(mailOptions);
+    if (!fromEmail || !toEmail) {
+      throw new Error('Missing RESEND_FROM_EMAIL or CONTACT_RECEIVER_EMAIL');
+    }
+
+    try {
+      const data = await this.resend.emails.send({
+        from: `Portfolio Contact <${fromEmail}>`,
+        to: [toEmail],
+        subject: 'Contact Form Submission',
+        html: `
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        `,
+      });
+
+      return data;
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      throw new Error('Failed to send email');
+    }
   }
 }
