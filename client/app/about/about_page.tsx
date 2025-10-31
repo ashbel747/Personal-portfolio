@@ -24,23 +24,27 @@ const services: Service[] = [
       "Improving search visibility and website performance with proven SEO strategies.",
   },
   {
-    title: "DevOps Engineering",
+    title: "UI/UX designer",
     description:
-      "Streamlining CI/CD pipelines, cloud deployments, and monitoring for efficient delivery.",
+      "Crafting elegant and engaging user interfaces that combine aesthetics with usability for a seamless digital experience",
   },
 ];
 
 const skills: Skill[] = [
-  { name: "TypeScript", level: 85 },
-  { name: "JavaScript", level: 90 },
+  { name: "TypeScript", level: 83 },
+  { name: "JavaScript (ES6+)", level: 88 },
   { name: "HTML/CSS", level: 95 },
+  { name: "Next.js", level: 90 },
+  { name: "Nest.js", level: 86 },
+  { name: "SEO Optimization", level: 79 },
+  { name: "UI/UX Design", level: 84 },
 ];
 
 export default function About() {
   return (
-    <section className="px-6 py-16 max-w-6xl mx-auto">
+    <section className="bg-white text-black p-3">
       {/* Heading */}
-      <h2 className="text-3xl font-bold text-center mb-12">What I Do</h2>
+      <h2 className="text-3xl font-bold text-center mb-12 text-black">What I Do</h2>
 
       {/* Services Cards */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-16">
@@ -51,27 +55,25 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800"
+            className="p-6 rounded-2xl shadow-md bg-white text-black"
           >
-            <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              {service.description}
-            </p>
+            <h3 className="text-xl font-semibold mb-3 text-black">{service.title}</h3>
+            <p className="text-black">{service.description}</p>
           </motion.div>
         ))}
       </div>
 
       {/* Skills Section */}
       <div>
-        <h3 className="text-2xl font-semibold mb-8 text-center">My Skills</h3>
-        <div className="space-y-6">
+        <h3 className="text-2xl font-semibold mb-8 text-center text-black">My Skills</h3>
+        <div className="space-y-6 max-w-2xl mx-auto">
           {skills.map((skill: Skill, index: number) => (
             <div key={index}>
               <div className="flex justify-between mb-1">
-                <span className="text-sm font-medium">{skill.name}</span>
-                <span className="text-sm font-medium">{skill.level}%</span>
+                <span className="text-sm font-medium text-black">{skill.name}</span>
+                <span className="text-sm font-medium text-black">{skill.level}%</span>
               </div>
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div className="w-full bg-gray-200 rounded-full h-3">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}

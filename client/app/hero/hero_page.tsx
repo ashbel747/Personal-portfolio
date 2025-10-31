@@ -4,13 +4,13 @@ import HeroTypingText from "../components/hero_typing";
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-white dark:bg-gray-800 text-black dark:text-white">
+    <section className="relative w-full bg-white text-black">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col-reverse items-center gap-10 py-16 lg:flex-row lg:gap-16 lg:py-24">
           
           {/* Left Side - Text */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Hi, I&apos;m <span className="text-blue-600">Ashbel King&apos;ori</span>
             </h1>
             <HeroTypingText />
@@ -18,17 +18,19 @@ export default function Hero() {
             {/* Buttons */}
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <Link
-                href="/contact"
+                href="/#contact"
                 className="rounded-lg bg-blue-600 px-6 py-3 text-white shadow-md transition hover:bg-blue-700"
               >
                 Contact me
               </Link>
-              <Link
-                href="/resume"
+              {/* Resume download button */}
+              <a
+                href="/Resume.pdf"
+                download="Ashbel_Resume.pdf"
                 className="rounded-lg border border-blue-600 px-6 py-3 text-blue-600 transition hover:bg-blue-50"
               >
                 View my resume
-              </Link>
+              </a>
             </div>
           </div>
 

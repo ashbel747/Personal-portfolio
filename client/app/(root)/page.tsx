@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Hero from "../pages/hero_page";
-import About from "../pages/about_page";
+import Hero from "../hero/hero_page";
+import About from "../about/about_page";
 import PortfolioPage from "../portfolio/page";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
@@ -21,10 +21,18 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <Hero />
-      <About />
-      <PortfolioPage />
-      <ContactForm />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <PortfolioPage />
+      </section>
+      <section id="contact">
+        <ContactForm />
+      </section>
       <Footer />
     </div>
   );

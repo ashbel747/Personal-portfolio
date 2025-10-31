@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroTypingText() {
   return (
-    <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-white">
+    <p className="mt-6 text-lg leading-8 text-gray-600">
       <Typewriter
         words={[
           "I'm a Full-Stack Developer passionate about building modern, scalable, and user-friendly web applications.",

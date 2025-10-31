@@ -14,9 +14,9 @@ export default function PortfolioGrid({ projects }: Props) {
   }
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-gray-100">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             My Projects
         </h2>
 
@@ -28,7 +28,7 @@ export default function PortfolioGrid({ projects }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col"
+                className="bg-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col"
             >
               {/* Image */}
               <div className="relative w-full h-48">
@@ -42,10 +42,10 @@ export default function PortfolioGrid({ projects }: Props) {
 
               {/* Content */}
               <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 flex-grow">
+                <p className="text-gray-600 flex-grow">
                   {project.description}
                 </p>
 

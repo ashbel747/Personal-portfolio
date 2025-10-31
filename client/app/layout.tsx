@@ -1,11 +1,12 @@
 import "./globals.css"; 
 import Navbar from "./components/Navbar";
-import { Home, Info, Mail, User } from "lucide-react";
+import { Home, Info, Mail, Scroll } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "/", icon: <Home size={20} /> },
-  { label: "About", href: "/about", icon: <Info size={20} /> },
-  { label: "Contact", href: "/contact", icon: <Mail size={20} /> },
+  { label: "About", href: "/#about", icon: <Info size={20} /> },
+  { label: "Projects", href: "/#projects", icon: <Scroll size={20} /> },
+  { label: "Contact", href: "/#contact", icon: <Mail size={20} /> },
 ];
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar items={navItems} />
-        <main className="pt-20">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
