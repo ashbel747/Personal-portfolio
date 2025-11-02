@@ -65,7 +65,7 @@ export default function Navbar({ items }: NavbarProps) {
       {isOpen && (
         <div
           className="md:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
-          onClick={closeMenu} // 👈 clicking anywhere closes menu
+          onClick={closeMenu}
         >
           {/* Stop propagation so clicking inside the dropdown doesn’t close it */}
           <div
@@ -76,9 +76,9 @@ export default function Navbar({ items }: NavbarProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={closeMenu} // also closes when clicking a link
+                onClick={closeMenu} // also closes dropdown when clicking a link
                 className={`flex items-center gap-3 p-3 rounded-xl text-lg transition
-                  hover:bg-blue-50 ${
+                  hover:bg-blue-50 active:bg-blue-50 ${
                     pathname === item.href ? "bg-blue-100 font-medium" : ""
                   }`}
               >

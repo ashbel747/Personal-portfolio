@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Hero from "../hero/hero_page";
-import About from "../about/about_page";
+import Hero from "../hero/page";
+import About from "../about/page";
 import PortfolioPage from "../portfolio/page";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";

@@ -10,6 +10,7 @@ export default function Hero() {
           
           {/* Left Side - Text */}
           <div className="flex-1 text-center lg:text-left">
+            <h1 className="text-xl m-5">To do: Add contact info e.g phone no and also education background with experience(Separate page). Also add a proper about me page separate.</h1>
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Hi, I&apos;m <span className="text-blue-600">Ashbel King&apos;ori</span>
             </h1>
@@ -35,24 +36,17 @@ export default function Hero() {
           </div>
 
           {/* Right Side - Image */}
-            <div className="flex-1 flex justify-center">
-            <div className="relative h-64 w-64 sm:h-80 sm:w-80 lg:h-[420px] lg:w-[420px]">
-                <Image
-                src="/profile.jpg"
+          <div className="flex-1 flex justify-center">
+            <div className="relative h-64 w-64 sm:h-80 sm:w-80 lg:h-[420px] lg:w-[420px] rounded-full overflow-hidden shadow-xl">
+              <Image
+                src="/profile.png"
                 alt="Ashbel King'ori"
                 fill
-                className="
-                    object-bottom shadow-xl 
-                    [mask-image:url('/mask.png')] 
-                    [-webkit-mask-image:url('/mask.png')] 
-                    [mask-size:cover] 
-                    [mask-repeat:no-repeat] 
-                    [mask-position:center]"
+                className="object-cover object-center"
                 priority
-                />
+              />
             </div>
-            </div>
-
+          </div>
 
         </div>
       </div>
