@@ -4,6 +4,7 @@ import About from "../about/page";
 import PortfolioPage from "../portfolio/page";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
+import Education from "../journey/page";
 
 export const metadata: Metadata = {
   title: "Ashbel King'ori | Portfolio",
@@ -29,6 +30,9 @@ export default function HomePage() {
       </section>
       <section id="projects">
         <PortfolioPage />
+      </section>
+      <section id="journey">
+        <Education />
       </section>
       <section id="contact">
         <ContactForm />
