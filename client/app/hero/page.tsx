@@ -45,30 +45,31 @@ export default function Hero() {
 
             {/* Buttons */}
             <motion.div
-              className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start"
+              className="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start items-center gap-4 w-full sm:w-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Link
                   href="/#contact"
-                  className="rounded-lg bg-blue-600 px-6 py-3 text-white shadow-md transition hover:bg-blue-700"
+                  className="block text-center w-full sm:w-auto rounded-lg bg-blue-600 px-6 py-3 text-white shadow-md transition hover:bg-blue-700"
                 >
                   Contact me
                 </Link>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <a
                   href="/Resume.pdf"
                   download="Ashbel_Resume.pdf"
-                  className="rounded-lg border border-blue-600 px-6 py-3 text-blue-600 transition hover:bg-blue-50"
+                  className="block text-center w-full sm:w-auto rounded-lg border border-blue-600 px-6 py-3 text-blue-600 transition hover:bg-blue-50"
                 >
                   View my resume
                 </a>
               </motion.div>
             </motion.div>
+
           </motion.div>
 
           {/* Right Side - Image */}

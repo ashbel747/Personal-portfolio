@@ -115,7 +115,7 @@ export default function MyJourney() {
       <motion.div
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.2 }}
-        className="bg-gray-50 shadow-md hover:shadow-lg transition-shadow rounded-2xl p-6"
+        className="bg-gray-100 border border-white/20 backdrop-blur-xl hover:shadow-xl rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all duration-300 p-6"
       >
         <h3 className="text-xl font-semibold text-blue-600 mb-1">{title}</h3>
         <p className="text-black font-medium">{subtitle}</p>

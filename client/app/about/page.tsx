@@ -92,16 +92,9 @@ export default function About() {
       ) : (
         <>
           {/* Intro Section */}
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-left mb-16">
             <p className="text-lg text-gray-700">
-              I’m a passionate{" "}
-              <span className="font-semibold text-blue-600">
-                Full-Stack Developer
-              </span>{" "}
-              dedicated to building beautiful, high-performance, and scalable
-              web experiences. My mission is to craft digital products that not
-              only look good but also deliver real value to users and businesses
-              alike.
+              I'm a passionate Full-Stack Developer dedicated to building beautiful, high-performance, and scalable web experiences. My mission is to craft digital products that not only look good but also deliver real value to users and businesses alike.
             </p>
           </div>
 
@@ -117,18 +110,19 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.2 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-2xl shadow-md bg-gray-50 text-black hover:shadow-lg transition"
+                className="p-6 rounded-2xl bg-gray-100 border border-white/20 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex flex-col items-center text-center">
                   {service.icon}
                   <h4 className="text-xl font-semibold mb-2 text-blue-600">
                     {service.title}
                   </h4>
-                  <p className="text-gray-800">{service.description}</p>
+                  <p className="text-gray-900">{service.description}</p>
                 </div>
               </motion.div>
             ))}
           </div>
+
 
           {/* Skills Section */}
           <div>

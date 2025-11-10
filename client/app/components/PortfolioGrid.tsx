@@ -70,7 +70,7 @@ export default function PortfolioGrid({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col"
+              className="bg-gray-100 border border-white/20 backdrop-blur-xl hover:shadow-xl rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all duration-300"
             >
               <div className="relative w-full h-48">
                 <Image
