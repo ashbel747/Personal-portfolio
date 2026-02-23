@@ -47,12 +47,12 @@ const educationData: EducationItem[] = [
 
 const experienceData: ExperienceItem[] = [
   {
-    company: "None yet. To add later",
-    role: "N/A",
-    period: "2025 - Present",
+    company: "Tison.io",
+    role: "Full-Stack developer",
+    period: "Nov 2025 - Feb 2026",
     description:
-      "N/A", 
-    progress: ProgressStatus.Ongoing,
+      "As a full-stack developer, I leveraged Next.js and NestJS to build high-performance, responsive client websites while utilizing Python for backend scripting and data optimization. I played a key role in the full development lifecycle, translating complex business requirements into technical architectures and collaborating with international, cross-functional teams within an Agile framework to deliver scalable digital solutions.", 
+    progress: ProgressStatus.Completed,
   },
 ];
 
